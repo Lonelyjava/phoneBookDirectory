@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+	header{background-color: powderblue;}
+	body{background-color: #00ffff;}
+	.header {
+			  overflow: hidden;
+			  background-color: #ccccff;
+			  padding: 20px 10px;
+			}
+						table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+table {
+  border-spacing: 15px;
+}
+footer {
+  text-align: center;
+  padding: 13px;
+  background-color: DarkSalmon;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+	<h2><b>Login.</b></h2>
+<div align="right">
+		<a href ="registerUser"><button class="btn btn-default">Sign Up</button></a>
+		<a href ="openBook"><button class="btn btn-default">Home</button></a>
+	</div>
+</div>
+<br><br>
+<div align="center">
+	<form action="loginPage" method="post">
+		<table style="width:40%">
+			<tr>
+				<td><h4>Email :</h4></td><td><input type="email" name="validateEmails" class="form-control" required="required" maxlength="30" placeholder="write Email"></td>
+			</tr>
+			<tr>
+				<td><h4>Password :</h4></td><td><input type="password" name="password" class="form-control" required="required" maxlength="8" placeholder="write Password"></td>
+				
+			</tr>
+			
+		</table>
+		<br>
+	<input type="submit" value="Login" class="btn btn-primary"><p><a href="forgatePassword">forgate password</a></p>
+	</form>
+	</div>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+<footer>
+  <p>Author: Kundan Kumar<br>
+  <a href="mailto:hege@example.com">kundankumar788@gmail.com</a></p>
+</footer>
+</body>
+</html>

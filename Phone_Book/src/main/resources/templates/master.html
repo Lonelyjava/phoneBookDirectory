@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+<title>Master - Creation</title>
+<style>
+form{
+			background-color: #d6d6c2;
+			padding: 20px;
+		}
+	/* 		table{
+			 background-color: #3385ff;
+		 }
+	th{
+	 		background-color: gray;
+		} */
+		button{
+		background-color: #3385ff;
+		}
+	.bg-primary {
+    background-color: #007bff!important;
+    padding-right: 900px;
+}
+container {
+  			margin-left: 70px;
+		}
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1253px;
+}
+body{
+background-color: #e6e6e6;
+}
+.home{
+			background-color: #d6d6c2;
+			padding: 20px;
+		}
+		/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  width: 160px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+header{background-color: powderblue;}
+	body{background-color: #00ffff;}
+	.header {
+			  overflow: hidden;
+			  background-color: #ccccff;
+			  padding: 20px 10px;
+			}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Welcome Master !</h1>
+<p><font color="red"><b><span th:text="${message}"></span></b></font></p>
+</div>
+
+<br>
+
+<div class="container">
+<br><br>
+<div class="dropdown">
+  <button class="dropbtn">Address Details</button>
+  <div class="dropdown-content">
+    <a href="state?action=state">State</a>
+    <a href="/${initParam['webAppName']}/MasterServlet?action=distric">District</a>
+    <a href="#">Country</a>
+    <a href="#">Address</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Hostel</button>
+  <div class="dropdown-content">
+    <a href="">State</a>
+    <a href="#">District</a>
+    <a href="#">Country</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Study</button>
+  <div class="dropdown-content">
+    <a href="#">Java</a>
+    <a href="#">Oracle</a>
+    <a href="#">Pl/Sql</a>
+    <a href="#">Javascript</a>
+    <a href="#">Jquery</a>
+    <a href="#">Sql</a>
+    <a href="#">Angular JS</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">School</button>
+  <div class="dropdown-content">
+    <a href="#">Standard</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Employee</button>
+  <div class="dropdown-content">
+    <a href="#">Teacher</a>
+    <a href="#">Human Resource</a>
+    <a href="#">Staff</a>
+    <a href="#">Standard</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Library</button>
+  <div class="dropdown-content">
+    <a href="#">Books</a>
+    <a href="#">Computer Lab</a>
+    <a href="#">Canteen</a>
+    <a href="#">Standard</a>
+  </div>
+  </div>
+  <div class="dropdown">
+  <button class="dropbtn">Main Master</button>
+  <div class="dropdown-content">
+    <a href="#">Books</a>
+    <a href="#">Computer Lab</a>
+    <a href="#">Canteen</a>
+    <a href="#">Standard</a>
+  </div>
+
+</div>
+<br><br>
+</div>
+
+<!-- Value Is:<span th:text="${value}"></span> -->
+
+<form action ="savedata">
+	<table>
+		<tr>
+	<td>	Name:</td>	<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+	<td>	Address:</td>	<td><input type="text" name="address"></td>
+		</tr>
+		<tr>
+	<td>	Mobile:</td>	<td><input type="text" name="mobile"></td>
+		</tr>
+	</table>
+	<input type="submit" value="Save">
+	 <a href ="viewMaster"> View Data</a>
+</form>
+
+
+</body>
+</html>

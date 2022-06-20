@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>View Phonebook</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link rel="shortcut icon" href="/logo/phone.jpg" />
+<style>
+h1 {
+	background-color: pink
+}
+;
+.container {
+  margin-left: 70px; /* Same as the width of the sidenav */
+  background: red;
+}
+
+</style>
+<script>
+</script>
+</head>
+<body>
+	<br>
+	<h1>PhoneBook View</h1>
+	<br>
+	<div class="container">
+		<th:block th:each="PhoneBook : ${phoneBookList}">
+		<table>
+			    <tr>
+				
+					<td style="padding: 22px;">PhoneBook Id:</td> 
+					<td style="padding: 22px;"><input type="text" class ="form-control" th:value="${PhoneBook.phonebook_id}" readonly="readonly"></td>
+					<td style="padding: 22px;">First Name: </td>
+					<td style="padding: 22px;"><input type="text" class ="form-control" th:value="${PhoneBook.fname}" readonly="readonly"></td>
+					<td style="padding: 22px;">Last Name:</td>
+					<td style="padding: 22px;"> <input type="text" class ="form-control" th:value="${PhoneBook.lname}" readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td style="padding: 22px;">Mobile: </td>
+					<td style="padding: 22px;"><input type="text" class ="form-control" th:value="${PhoneBook.mobile}" readonly="readonly"></td>
+					<td style="padding: 22px;">Email:</td>
+					<td style="padding: 22px;"> <input type="text" class ="form-control" th:value="${PhoneBook.email}" readonly="readonly"></td>
+					<td style="padding: 22px;">Contacts:</td>
+					<td style="padding: 22px;"> <input type="text" class ="form-control" th:value="${PhoneBook.contacts}" readonly="readonly" ></td>
+				</tr>
+				
+				<tr>				
+					<td style="padding: 22px;">State:</td>
+					<td style="padding: 22px;"> <input type="text" class ="form-control" th:value="${PhoneBook.state}" readonly="readonly"></td>
+					<td style="padding: 22px;">Date: </td>
+					<td style="padding: 22px;"><input type="text"  class ="form-control" th:value="${PhoneBook.fromDate}" readonly="readonly"></td>
+					<td style="padding: 22px;">Register Date: </td>
+					<td style="padding: 22px;"><input type="text" class ="form-control" th:value="${PhoneBook.register_date}"readonly="readonly"></td>
+			</tr>
+			<tr>
+					<td style="padding: 22px;">Service Provider:</td>
+					<td style="padding: 22px;"> <input type="text" class ="form-control" th:value="${PhoneBook.serviceProvider}" readonly="readonly"></td>
+					<td style="padding: 22px;">Country: </td>
+					<td style="padding: 22px;"><input type="text" class ="form-control" th:value="${PhoneBook.country}" readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td style="padding: 22px;">Address :</td>
+					<td style="padding: 22px;"> <input type="text" class ="form-control" th:value="${PhoneBook.address}" style="width: 201px;height: 121px;	"readonly="readonly"></td>
+				</tr>	
+			
+			</table>
+		</th:block>
+		<div align="center"><button class ="btn btn-primary" onclick="javascript:window.close()">Close</button></div>
+	</div>
+</body>
+</html>
